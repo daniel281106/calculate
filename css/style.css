@@ -60,13 +60,12 @@
 }
 
 .body {
-    transition: background 1s linear;
+    transition: background 2s linear;
     height: 100vh;
     display: flex;
-    width: 100vw;
     flex-direction: column;
     justify-content: center;
-    background: linear-gradient(15deg, #7C99AC, #FFEFEF);
+    background: linear-gradient(45deg,#3f7192, #D3DEDC);
     align-items: center;
 }
 
@@ -141,7 +140,7 @@
 .li,
 .pa,
 .i {
-    transition: background 1s linear;
+    transition: all 1.5s linear;
     color: black;
     display: flex;
     background: #FFEFEF;
@@ -178,7 +177,7 @@
 .li.dark,
 .pa.dark,
 .i.dark {
-    transition: background 1s linear;
+    transition: background 1.5s linear;
     color: #00ff15;
     text-shadow: .1rem .1rem .4rem #00ff15, .1rem .1rem .2rem #00ff15;
     display: flex;
@@ -196,7 +195,7 @@
 .teclas.dark {
     position: absolute;
     bottom: 4rem;
-    transition: background 1s linear;
+    transition: background 1.5s linear;
     background: #333;
     border-radius: .6rem;
     display: flex;
@@ -224,22 +223,21 @@
     width: 22rem;
     margin-top: 2rem;
     box-shadow: inset .3rem .3rem .4rem, inset 0rem 0rem .6rem, inset -.3rem -.3rem .4rem;
-    transition: background 1s linear;
+    transition: background 1.5s linear;
 }
 
-body.dark {
+.body.dark {
     height: 100vh;
     display: flex;
-    width: 100vw;
     flex-direction: column;
     justify-content: center;
-    background: radial-gradient(#333, #000);
+    background: radial-gradient(#333,#000);
     align-items: center;
     transition: background 1s linear;
 }
 
 .calculadora.dark {
-    transition: background 1s linear;
+    transition: background 1.5s linear;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -249,46 +247,39 @@ body.dark {
     border: none;
     height: 39.5rem;
     width: 24.5rem;
-    box-shadow: -.2rem .2rem .6rem, inset .2rem -.2rem .6rem, -.2rem .2rem .6rem,
-        -.2rem .2rem .6rem;
+    
 }
 
 .calculadora.dark::before,
 .calculadora.dark::after {
     content: "";
     position: absolute;
-    display: flex;
+    top: -.2rem;
+    left: -.3rem;
     transition: all 0.5s linear;
     background: linear-gradient(45deg, #00ff08, #00c206, #00ac06, #006b04, #005503, #003d02, #002a01, #000000);
-    width: calc(100% + .1rem);
-    height: calc(100% + 0.1rem);
-    border-top: 0;
-    border-radius: .6rem;
+    width: calc(100% + .5rem);
+    height: calc(100% + .5rem); 
+    border-radius: 1rem;
     background-size: 300%;
     background-position: 100%;
     z-index: -1;
-    box-shadow: -.2rem -.2rem 0.6rem#00ff08, .2rem .2rem 0.6rem#00ff08, -.2rem -.2rem 0.6rem#00ff08, .2rem .2rem 0.6rem#00ff08, -.2rem -.2rem 0.6rem#00ff08, -.2rem -.2rem 0.6rem#00ff08;
-    animation: anime 4s infinite ease-in-out alternate;
-    transition: all 1s linear;
-
+    animation: anime 8s infinite alternate 2s;
 }
 
 @keyframes anime {
     0% {
-        transition: all 1s linear;
         background-position: 0%;
     }
 
     100% {
-        transition: all 1s linear;
         background-position: 300%;
     }
 
 }
 
 .calculadora.dark::after {
-    filter: blur(1.0rem);
-    transition: all 1s linear;
+    filter: blur(.6rem);
 }
 
 .label .ball.dark {

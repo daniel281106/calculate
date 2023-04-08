@@ -112,6 +112,7 @@ const variaveis = {
         })
     }
 }
+                
 variaveis.escrever()
 variaveis.operar()
 variaveis.dark()
